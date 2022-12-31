@@ -15,6 +15,20 @@ float pmtTurun (float x){
     return miu;
 }
 
+float pmtNaik (float x ){
+    float miu;
+
+    if(x <= 1000){
+        miu  = 0;
+    }else if( x > 1000 && x < 5000){
+        miu = (x - 1000) / 4000;
+    }else{
+        miu = 1;
+    }
+
+    return miu;
+}
+
 //int main(){
 //
 //
