@@ -90,8 +90,53 @@ float prdKurang (float apr){
     z = b - (apr * (b -a));
     return z;
 }
-//int main(){
-//
-//
-//    return 0;
-//}
+
+
+
+int main()
+{
+    float x, y, r1, r2, r3, r4, z1, z2, z3, z4, result;
+
+    cout << "======TAHAP FUZIFIKASI======" << endl;
+    cout << "Masukkan permintaan : ";
+    cin >> x;
+    cout << "Miu Permintaan Naik : "<< pmtNaik(x) << endl;
+    cout << "Miu Permintaan Turun : "<< pmtTurun(x) << endl;
+
+    cout << "masukkan persediaan x : ";
+    cin >> y;
+    cout << "Miu Persediaan Banyak : " << psdBanyak(y) << endl;
+    cout << "Miu Persediaan Sedikit : " <<psdSedikit(y) << endl<< endl;
+
+    r1 = apredikat(pmtTurun(x), psdBanyak(y));
+    r2 = apredikat(pmtTurun(x), psdSedikit(y));
+    r3 = apredikat(pmtNaik(x), psdBanyak(y));
+    r4 = apredikat(pmtNaik(x), psdSedikit(y));
+
+    z1 = prdKurang(r1);
+    z2 = prdKurang(r2);
+    z3 = prdTambah(r3);
+    z4 = prdTambah(r4);
+
+    cout << "======TAHAP INFERENSI======" << endl;
+    cout << "APR [1] : " << r1 << endl;
+    cout << "Z1 : " << z1 << endl;
+
+    cout << "APR [2] : " << r2 << endl;
+    cout << "Z2 : " << z2 << endl;
+
+    cout << "APR [3] : " << r3 << endl;
+    cout << "Z3 : " << z3 << endl;
+
+    cout << "APR [4] : " << r4 << endl;
+    cout << "Z4 : " << z4 << endl << endl;
+
+
+    result = ((r1 * z1) + (r2 * z2) + (r3 * z3) + (r4 * z4)) / (r1 + r2 + r3 + r4);
+
+    cout << "======TAHAP DEFUZZIFIKASI======"<<endl << result;
+
+
+
+    return 0;
+}
