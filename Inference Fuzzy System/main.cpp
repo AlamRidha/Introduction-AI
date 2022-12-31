@@ -70,6 +70,16 @@ float apredikat(float a, float b){
 
     return apr;
 }
+
+
+float prdTambah(float apr){
+    float a,b,z;
+    a = 2000;
+    b = 7000;
+
+    z = a + (apr * (b - a ));
+    return z;
+}
 //int main(){
 //
 //
