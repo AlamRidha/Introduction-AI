@@ -43,6 +43,22 @@ float psdBanyak (float y){
     return miu;
 }
 
+
+float psdSedikit (float y){
+    float miu;
+
+    if(y <= 100){
+        miu = 1;
+    }else if( y > 100 && y < 600){
+        miu =(600 - y) / 500;
+    }else {
+        miu = 0;
+    }
+
+    return miu;
+}
+
+
 //int main(){
 //
 //
