@@ -29,6 +29,20 @@ float pmtNaik (float x ){
     return miu;
 }
 
+float psdBanyak (float y){
+    float miu;
+
+    if(y <= 100){
+        miu = 0;
+    }else if(y > 100 && y < 600){
+        miu = (y - 100) / 500;
+    }else{
+        miu = 1;
+    }
+
+    return miu;
+}
+
 //int main(){
 //
 //
