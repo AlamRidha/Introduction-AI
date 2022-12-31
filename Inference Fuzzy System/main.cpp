@@ -59,6 +59,17 @@ float psdSedikit (float y){
 }
 
 
+float apredikat(float a, float b){
+    float apr;
+
+    if(a > b){
+        apr = b;
+    }else{
+        apr = a;
+    }
+
+    return apr;
+}
 //int main(){
 //
 //
