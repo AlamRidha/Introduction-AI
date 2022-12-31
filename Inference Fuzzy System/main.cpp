@@ -80,6 +80,16 @@ float prdTambah(float apr){
     z = a + (apr * (b - a ));
     return z;
 }
+
+
+float prdKurang (float apr){
+    float a,b,z;
+    a = 2000;
+    b = 7000;
+
+    z = b - (apr * (b -a));
+    return z;
+}
 //int main(){
 //
 //
